@@ -1,0 +1,20 @@
+footer{
+    width: 100%;
+    padding: 10px;
+    background-color: #212121;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.foot-content{
+    color: #fff;
+    text-align: center;
+}
+
+.foot-content p{
+    font-size: 18px;
+    line-height: 25px;
+}
