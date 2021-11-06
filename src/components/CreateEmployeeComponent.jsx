@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import EmployeeService from '../services/EmployeeService';
 import "./AddEmployee.css";
 
 class CreateEmployeeComponent extends Component {
@@ -24,6 +25,9 @@ class CreateEmployeeComponent extends Component {
         e.preventDefault();
         let employee = {name: this.state.name, email: this.state.email, jobTitle: this.state.jobTitle, phone: this.state.phone, imageUrl: this.state.imageUrl};
         console.log('employee =' + JSON.stringify(employee));
+
+        EmployeeService.createEmployee(employee);
+
     }
 
     changeNameHandler = (event) =>{

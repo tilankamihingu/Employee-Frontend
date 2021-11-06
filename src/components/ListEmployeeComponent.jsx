@@ -25,14 +25,15 @@ export default class ListEmployeeComponent extends Component {
             <div className="employee-row">
                 {
                     this.state.employees.map(employee =>(
-                        <div className="employee-card">
+                        <div className="employee-card" key={employee.id}>
                             <img src={employee.imageUrl} alt="" />
                             <div className="card-details">
                                 <h2>{employee.name}</h2>
                                 <p>Email: {employee.email}</p>
                                 <p>Job Title: {employee.jobTitle}</p>
                                 <h3>Phone Number: {employee.phone}</h3>
-                        </div>
+                                <button onClick = { () => this.editEmployee(employee.id)} className="card-btn">Edit</button>
+                            </div>
                         </div>
                     ))
                 }
