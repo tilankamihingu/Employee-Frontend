@@ -10,9 +10,12 @@ export default class ListEmployeeComponent extends Component {
         this.state = {
             employees: []
         }
-        
+        this.editEmployee = this.editEmployee.bind(this);
     }
 
+    editEmployee(id){
+        this.props.history.push(`/update/${id}`);
+    }
 
     componentDidMount(){
         EmployeeService.getEmployees().then((res) =>{
@@ -34,7 +37,8 @@ export default class ListEmployeeComponent extends Component {
                                 <p>Email: {employee.email}</p>
                                 <p>Job Title: {employee.jobTitle}</p>
                                 <h3>Phone Number: {employee.phone}</h3>
-                                <Link to={`/update/${employee.id}`}><button className="card-btn">View</button></Link>
+                                <button onClick={ () => this.editEmployee(employee.id) } className="card-btn" >view</button>
+                                {/*<Link to={`/update/${employee.id}`}><button className="card-btn">View</button></Link>*/}
                             </div>
                         </div>
                     ))

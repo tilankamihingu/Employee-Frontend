@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 import EmployeeService from '../services/EmployeeService';
 
 class UpdateEmployeeComponent extends Component {
@@ -7,7 +8,7 @@ class UpdateEmployeeComponent extends Component {
         super(props)
 
         this.state = {
-            id: this.props.match.params.id,
+            id: this.props.match.params.id, 
             name: '',
             email: '',
             jobTitle: '',
@@ -40,7 +41,7 @@ class UpdateEmployeeComponent extends Component {
         let employee = {name: this.state.name, email: this.state.email, jobTitle: this.state.jobTitle, phone: this.state.phone, imageUrl: this.state.imageUrl};
         console.log('employee =' + JSON.stringify(employee));
 
-        EmployeeService.createEmployee(employee);
+        
 
     }
 

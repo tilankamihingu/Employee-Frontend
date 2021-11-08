@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import ListEmployeeComponent from './components/ListEmployeeComponent';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import CreateEmployeeComponent from './components/CreateEmployeeComponent';
@@ -12,11 +12,11 @@ function App() {
     <Router>
     <div className="App">
       <Header />
-      <Routes>
-        <Route exact path="/" element={<ListEmployeeComponent/>} /> 
-        <Route path="/add" element={<CreateEmployeeComponent/>} />
-        <Route path="/update/:id" element={<UpdateEmployeeComponent/>} />
-      </Routes>
+      <Switch>
+        <Route exact path="/" component={ListEmployeeComponent} /> 
+        <Route path="/add" component={CreateEmployeeComponent} />
+        <Route path="/update/:id" component={UpdateEmployeeComponent} />
+      </Switch>
       <Footer />
     </div>
     </Router>
