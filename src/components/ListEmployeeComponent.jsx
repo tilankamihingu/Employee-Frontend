@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 import EmployeeService from '../services/EmployeeService';
 import './EmpList.css';
 
@@ -9,6 +10,7 @@ export default class ListEmployeeComponent extends Component {
         this.state = {
             employees: []
         }
+        
     }
 
 
@@ -32,7 +34,7 @@ export default class ListEmployeeComponent extends Component {
                                 <p>Email: {employee.email}</p>
                                 <p>Job Title: {employee.jobTitle}</p>
                                 <h3>Phone Number: {employee.phone}</h3>
-                                <button onClick = { () => this.editEmployee(employee.id)} className="card-btn">Edit</button>
+                                <Link to={`/update/${employee.id}`}><button className="card-btn">View</button></Link>
                             </div>
                         </div>
                     ))
