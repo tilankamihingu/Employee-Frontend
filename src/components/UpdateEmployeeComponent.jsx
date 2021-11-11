@@ -41,6 +41,9 @@ class UpdateEmployeeComponent extends Component {
         let employee = {name: this.state.name, email: this.state.email, jobTitle: this.state.jobTitle, phone: this.state.phone, imageUrl: this.state.imageUrl};
         console.log('employee =' + JSON.stringify(employee));
 
+        EmployeeService.updateEmployee(employee, this.state.id).then(res => {
+            this.props.history.push('/');
+        });
         
 
     }
@@ -75,15 +78,15 @@ class UpdateEmployeeComponent extends Component {
                 <div className="right-side">
                     <form>
                         <h1>Name</h1>
-                        <input type="text" required placeholder="name" value={this.state.name} onChange={this.changeNameHandler} />
+                        <input type="text" required placeholder="name" name="name" value={this.state.name} onChange={this.changeNameHandler} />
                         <h1>Email</h1>
-                        <input type="text" required placeholder="email" value={this.state.email} onChange={this.changeEmailHandler} />
+                        <input type="text" required placeholder="email" name="email" value={this.state.email} onChange={this.changeEmailHandler} />
                         <h1>Job Title</h1>
-                        <input type="text" required placeholder="job title" value={this.state.jobTitle} onChange={this.changeJobHandler} />
+                        <input type="text" required placeholder="job title" name="jobTitle" value={this.state.jobTitle} onChange={this.changeJobHandler} />
                         <h1>Phone</h1>
-                        <input type="text" required placeholder="phone number" value={this.state.phone} onChange={this.changePhoneHandler} />
+                        <input type="text" required placeholder="phone number" name="phone" value={this.state.phone} onChange={this.changePhoneHandler} />
                         <h1>Image Url</h1>
-                        <input type="text" required placeholder="image url" value={this.state.imageUrl} onChange={this.changeImageHandler} />
+                        <input type="text" required placeholder="image url" name="imageUrl" value={this.state.imageUrl} onChange={this.changeImageHandler} />
                         <button onClick={this.updateEmployee} className="send">Send</button>
                     </form>
                 </div>
