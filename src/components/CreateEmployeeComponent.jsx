@@ -26,7 +26,9 @@ class CreateEmployeeComponent extends Component {
         let employee = {name: this.state.name, email: this.state.email, jobTitle: this.state.jobTitle, phone: this.state.phone, imageUrl: this.state.imageUrl};
         console.log('employee =' + JSON.stringify(employee));
 
-        EmployeeService.createEmployee(employee);
+        EmployeeService.createEmployee(employee).then(res => {
+            this.props.history.push('/');
+        });
 
     }
 
@@ -55,7 +57,7 @@ class CreateEmployeeComponent extends Component {
              <div className="contact-content">
             <div className="contact">
                 <div className="left-side">
-                    <h1 className="title-register">Contact Us</h1>
+                    <h1 className="title-register">Add Employee</h1>
                 </div>
                 <div className="right-side">
                     <form>
@@ -69,7 +71,7 @@ class CreateEmployeeComponent extends Component {
                         <input type="text" required placeholder="phone number" value={this.state.phone} onChange={this.changePhoneHandler} />
                         <h1>Image Url</h1>
                         <input type="text" required placeholder="image url" value={this.state.imageUrl} onChange={this.changeImageHandler} />
-                        <button onClick={this.saveEmployee} className="send">Send</button>
+                        <button onClick={this.saveEmployee} className="send">Save</button>
                     </form>
                 </div>
             </div>

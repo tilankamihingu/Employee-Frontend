@@ -3,13 +3,11 @@
 }
 .employee-container{
     width: 100%;
-   
-    
+    padding-top: 20px;
 }
 
 .employee-row{
     width: 100%;
-
     display: flex;
     flex-wrap: wrap;
     margin-top: 40px;
@@ -20,7 +18,7 @@
     max-width: 340px;
     width: 100%;
     overflow: hidden;
-    height: 520px;
+    height: 500px;
     padding: 15px;
     margin: 30px;
     cursor: pointer;
@@ -60,9 +58,16 @@
 }
 
 .card-details h3{
-    font-size: 26px;
-    color: brown;
+    font-size: 18px;
     margin-top: 8px;
+}
+
+.button-group{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
 }
 
 .card-btn{
@@ -71,10 +76,9 @@
     color: #000;
     text-align: center;
     margin-top: 15px;
-    margin-left: 0px;
     border: none;
     height: 45px;
-    width: 100%;
+    width: 140px;
     border-radius: 10px;
     transition: 0.5s;
 }
@@ -93,7 +97,13 @@
         font-size: 18px;
     }
     .employee-card{
-        height: 560px;
+        height: 480px;
     }
+    .card-btn{
+        width: 120px;
+    }
+    .employee-container{
+        padding-top: 20px;
+    } 
 }
 

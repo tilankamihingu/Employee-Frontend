@@ -12,9 +12,16 @@
     align-items: center;
     justify-content: space-between;
     /*background: #17b978;*/
-    background-color: #086972;
-    
+    background-color: #10316b;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
     z-index: 1000;
+}
+
+.navbar h2{
+    color: #fff;
+    margin-left: 10px;
 }
 
 .logo{
@@ -93,6 +100,10 @@ nav ul li .menu{
     }
     nav ul li a{
         color: #fff;
+    }
+
+    .navbar h2{
+        font-size: 14px;
     }
 
     .menu{

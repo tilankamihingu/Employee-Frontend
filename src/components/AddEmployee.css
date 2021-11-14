@@ -13,12 +13,12 @@
     max-width: 600px;
     width: 100%;
     margin-top: 20vh;
-    border: 2px solid #17b978;
+    border: 2px solid #0b8457;
 }
 
 .left-side{
     width: 40%;
-    background: #17b978;
+    background: #0b8457;
     text-align: center;
     display: flex;
 }
@@ -79,10 +79,11 @@
     height: 40px;
     border: none;
     outline: none;
-    background: goldenrod;
-    font-size: 14px;
-    color: #ffffff;
-    letter-spacing: 2px;
+    background: #eac100;
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 1.2px;
     border-radius: 10px;
     margin-top: 10px;
 }

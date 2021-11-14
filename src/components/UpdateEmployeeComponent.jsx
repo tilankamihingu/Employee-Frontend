@@ -37,7 +37,7 @@ class UpdateEmployeeComponent extends Component {
 
     updateEmployee = (e) =>{
         e.preventDefault();
-        let employee = {id:this.state.id,name: this.state.name, email: this.state.email, jobTitle: this.state.jobTitle, phone: this.state.phone, imageUrl: this.state.imageUrl};
+        let employee = {id:this.state.id, name: this.state.name, email: this.state.email, jobTitle: this.state.jobTitle, phone: this.state.phone, imageUrl: this.state.imageUrl};
         console.log('employee =' + JSON.stringify(employee));
 
         EmployeeService.updateEmployee(employee, this.state.id).then(res => {
@@ -70,7 +70,7 @@ class UpdateEmployeeComponent extends Component {
              <div className="contact-content">
             <div className="contact">
                 <div className="left-side">
-                    <h1 className="title-register">Contact Us</h1>
+                    <h1 className="title-register">Update Employee</h1>
                 </div>
                 <div className="right-side">
                     <form>
